@@ -1,0 +1,52 @@
+@import 
+url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&display=swap');
+
+* {
+  font-family: Montserrat, sans-serifß;
+}
+
+:root {
+  /* Declaring styles */
+  
+  /* Colours */
+
+  --primary-color: #f82e74;
+  --primary-text-color: white;
+  --background-color: #f3f4f6;
+  --paper-color: white;
+  --text-color: black;
+
+  /* Sizes */
+  --unit-size: 0.5rem;
+
+  --xs-size: calc(var(--unit-size)/2);
+  --s-size: var(--unit-size);
+  --m-size: calc(var(--unit-size)*2);
+  --l-size: calc(var(--unit-size)*3);
+  --xl-size: calc(var(--unit-size)*4);
+
+  /* Rounded borders */
+  
+  --unit-rounded: 4px;
+
+  --circle: border-radius: 50%
+  --xs-rounded: calc(var(--unit-rounded)/2);
+  --s-rounded: var(--unit-rounded);
+  --m-rounded: calc(var(--unit-rounded)*2);
+  --l-rounded: calc(var(--unit-rounded)*3);
+  --xl-rounded: calc(var(--unit-rounded)*4);
+
+  /* Borders */
+
+  --s-border: thin solid #00000030;
+
+
+}
+
+html, body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  overflow: hidden;
+
+}
