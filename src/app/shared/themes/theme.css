@@ -12,7 +12,8 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&displa
 
   --primary-color: #f82e74;
   --primary-text-color: white;
-  --background-color: #f3f4f6;
+  --white-background-color: #f3f4f6;
+  --background-color: #121212;
   --paper-color: white;
   --text-color: black;
 
@@ -45,7 +46,7 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&displa
 
 html, body {
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: var(--primary-text-color);
   margin: 0;
   overflow: hidden;
 
