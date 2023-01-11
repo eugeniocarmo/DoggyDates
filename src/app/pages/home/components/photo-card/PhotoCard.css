@@ -1,0 +1,61 @@
+.photo-card-container {
+  padding: var(--xs-size);
+  border: var(--s-border);
+  background-color: var(--graphite-paper)
+  /* position:absolute; */
+  /* transition: all 0.2; */
+}
+
+.photo-card-title {
+  font-weight: 500;
+  padding-left: var(--m-size);
+  padding-right: var(--m-size)
+}
+
+.photo-card-image {
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+
+@keyframes animation-photo-card-move {
+  from {
+    opacity: 1;
+    transform: translate(0px, 10px);
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(var(--movement-x), 10px);
+  }
+}
+.photo-card-move-left {
+  --movement-x: -1000px;
+  
+  /* start*/
+  opacity: 1;
+  transform: translate(0px, 10px);
+  /* Animation */
+  animation-duration: .5s;
+  animation-name: animation-photo-card-move;
+  /* Ending animation */
+  /* the line below refers for the animation to stay in place */
+  opacity: 0;
+  transform: translate(var(--movement-x), 10px);
+}
+
+.photo-card-move-right {
+  --movement-x: 1000px;
+  
+  /* start*/
+  opacity: 1;
+  transform: translate(0px, 10px);
+  /* Animation */
+  animation-duration: .5s;
+  animation-name: animation-photo-card-move;
+  /* Ending animation */
+  /* the line below refers for the animation to stay in place */
+  opacity: 0;
+  transform: translate(var(--movement-x), 10px);
+  
+}

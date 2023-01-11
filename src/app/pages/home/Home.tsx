@@ -1,14 +1,16 @@
 import { useEffect, useMemo, useState } from "react"
-import { LikeDislike } from "./components/like-dislike/LikeDislike";
 
+import { LikeDislike } from "./components/like-dislike/LikeDislike";
+import { PhotoCard } from "./components/photo-card/PhotoCard";
+
+
+interface ICardsList {
+  url: string;
+  decision: undefined | 'like' | 'dislike'; 
+}
+  
 
 export const Home = () => {
-
-  interface ICardsList {
-    url: string;
-    decision: undefined | 'like' | 'dislike'; 
-  }
-
   const [images, setImages] = useState<ICardsList[]>([]);
 
   // Development starts here: (6:55)
@@ -51,7 +53,17 @@ export const Home = () => {
       {imagesToRender.map(image => (
          <p>{image.url}</p> 
       ))}
-      
+
+      <PhotoCard
+        imageUrl={"https://images.dog.ceo/breeds/frise-bichon/2.jpg"}
+        shadowForFirstCard={true}
+        move={undefined}
+        stackingTop={0}
+        
+        
+
+     />
+
       <LikeDislike 
         like={() => console.log('like')}
         dislike={() => console.log('dislike')}

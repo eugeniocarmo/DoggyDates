@@ -11,10 +11,13 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&displa
   /* Colours */
 
   --primary-color: #f82e74;
-  --primary-text-color: white;
+  --primary-text-color: black;
   --white-background-color: #f3f4f6;
-  --background-color: #121212;
-  --paper-color: white;
+  /* --background-color: #121212; */
+  --background-color: #ffffff;
+  --paper-color: rgb(228, 220, 220);
+  /* --graphite-paper: #1a1a22; */
+  --graphite-paper: #f5f4f0;
   --antique-paper-color: #f4f0e8;
   --text-color: black;
 
