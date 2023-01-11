@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
+import { LikeDislike } from "./components/like-dislike/LikeDislike";
 
 
 export const Home = () => {
@@ -16,7 +17,6 @@ export const Home = () => {
     return;
 
     fetch ('https://dog.ceo/api/breeds/image/random', { method: 'get'})
-      // .then (response => response.json())
       .then (response => response.json())
       .then ((value) => { 
         setImages(oldImages => [
@@ -49,13 +49,19 @@ export const Home = () => {
       <p>{backgroundImage}</p>
       <hr />
       {imagesToRender.map(image => (
-         <p>{image.url}</p> ))}
+         <p>{image.url}</p> 
+      ))}
+      
+      <LikeDislike 
+        like={() => console.log('like')}
+        dislike={() => console.log('dislike')}
+      />
     </div >
   );
 }
 
 
-// Comments as I go through creating the code (in portuguese language /format)
+// Comments as I go through creating the code (in portuguese language )
 // Temos que que usear O useEffect para connectar com a API 
 // useEffect(() => usamos então o fetch 
 // o Fetch também permite receber o parametro que é um objeto {}

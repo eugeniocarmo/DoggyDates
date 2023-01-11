@@ -15,6 +15,7 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&displa
   --white-background-color: #f3f4f6;
   --background-color: #121212;
   --paper-color: white;
+  --antique-paper-color: #f4f0e8;
   --text-color: black;
 
   /* Sizes */
@@ -29,13 +30,12 @@ url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500&displa
   /* Rounded borders */
   
   --unit-rounded: 4px;
-
-  --circle: border-radius: 50%
   --xs-rounded: calc(var(--unit-rounded)/2);
   --s-rounded: var(--unit-rounded);
   --m-rounded: calc(var(--unit-rounded)*2);
   --l-rounded: calc(var(--unit-rounded)*3);
   --xl-rounded: calc(var(--unit-rounded)*4);
+  --full-rounded: 50%;
 
   /* Borders */
 

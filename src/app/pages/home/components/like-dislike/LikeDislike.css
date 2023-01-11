@@ -1,0 +1,29 @@
+
+
+.like-dislike-container {
+  display: flex;
+  gap: var(--m-size);
+  justify-content: center;
+}
+
+.like-dislike-button {
+  border: none;
+  background-color: var(--paper-color);
+  padding: var(--m-size);
+  border-radius: var(--full-rounded);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.like-dislike-button:hover {
+  opacity: .8;
+  cursor: pointer;
+  
+}
+
+.like-dislike-button:active {
+  opacity: .5;
+}
+
