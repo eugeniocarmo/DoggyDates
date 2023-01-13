@@ -1,9 +1,9 @@
 .photo-card-container {
   padding: var(--xs-size);
   border: var(--s-border);
-  background-color: var(--graphite-paper)
-  /* position:absolute; */
-  /* transition: all 0.2; */
+  background-color: var(--graphite-paper);
+  position: absolute;
+  transition: all 0.2;
 }
 
 .photo-card-title {
@@ -13,8 +13,8 @@
 }
 
 .photo-card-image {
-  width: 350px;
-  height: 350px;
+  width: 28rem;
+  height: 28rem;
   object-fit: contain;
 }
 
@@ -30,7 +30,7 @@
   }
 }
 .photo-card-move-left {
-  --movement-x: -1000px;
+  --movement-x: -62.5rem;
   
   /* start*/
   opacity: 1;
@@ -45,7 +45,7 @@
 }
 
 .photo-card-move-right {
-  --movement-x: 1000px;
+  --movement-x: 62.5rem;
   
   /* start*/
   opacity: 1;

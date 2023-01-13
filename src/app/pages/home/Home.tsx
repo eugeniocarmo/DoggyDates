@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 
 import { LikeDislike } from "./components/like-dislike/LikeDislike";
 import { PhotoCard } from "./components/photo-card/PhotoCard";
+import './Home.css';
 
 
 interface ICardsList {
@@ -45,29 +46,54 @@ export const Home = () => {
       }
     },[imagesToRender]);
 
+    const handleLikeDislike = useCallback((decision: 'like' | 'dislike') => {
+      const filteredImages = images.filter(image => image.decision === undefined);
+
+      filteredImages.forEach((image, index, array) => {
+        if (array.length - 1 === index) {
+          image.decision = decision;
+        }
+      });
+
+      setImages ([...filteredImages]);
+    }, [images])
+
   return (
 
-    <div>
-      <p>{backgroundImage}</p>
-      <hr />
-      {imagesToRender.map(image => (
-         <p>{image.url}</p> 
-      ))}
-
-      <PhotoCard
-        imageUrl={"https://images.dog.ceo/breeds/frise-bichon/2.jpg"}
-        shadowForFirstCard={true}
-        move={undefined}
-        stackingTop={0}
-        
-        
-
-     />
-
-      <LikeDislike 
-        like={() => console.log('like')}
-        dislike={() => console.log('dislike')}
+    <div className='main'>
+      {backgroundImage && (
+        <img 
+        className='main-background-image' 
+        src={backgroundImage} 
+        draggable={false} 
       />
+      )}
+
+      <div className="content">
+        
+        <div className="list-photo-cards">
+
+          {imagesToRender.map((image, index) => (
+            <PhotoCard
+            key={image.url}
+            imageUrl={image.url}
+            shadowForFirstCard={index === 0}
+            stackingTop={(index + 1)*2}
+            move={image.decision ? image.decision === 'like' ? 'right': 'left': undefined}
+          />
+          ))}
+          
+          </div>
+
+          {imagesToRender.length > 0 && (
+            <LikeDislike 
+            like={() => handleLikeDislike('like')}
+            dislike={() => handleLikeDislike('dislike')}
+          />
+          )}
+      </div>
+      
+      
     </div >
   );
 }

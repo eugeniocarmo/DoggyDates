@@ -1,0 +1,31 @@
+.main {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-background-image {
+  width: 200vw;
+  height: 200vw;
+  
+  top: -70vh;
+  left: -40vw;
+  z-index: 0;
+  position: fixed; 
+
+  filter:blur(10px);
+  object-fit: contain;
+}
+
+.content {
+  z-index: 1;
+}
+
+.list-photo-cards {
+  /* width: 19.375rem; */
+  width: 27.2rem;
+  height: 33.75rem;
+}
